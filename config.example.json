@@ -1,0 +1,14 @@
+{
+  "provider": "ntfy",
+  "ntfy_topic": "rafael-overwatch-8472",
+  "telegram_token": "",
+  "telegram_chat_id": "",
+  "reference_image": "reference/match_found.png",
+  "monitor": 1,
+  "check_interval": 1.0,
+  "threshold": 0.80,
+  "scales": [0.8, 0.9, 1.0, 1.1, 1.2],
+  "work_scale": 0.5,
+  "cooldown": 60,
+  "message": "Partida encontrada! Volte para o Overwatch"
+}

@@ -1,0 +1,6 @@
+config.json
+reference/*.png
+__pycache__/
+.venv/
+*.pyc
+meu_print.png
