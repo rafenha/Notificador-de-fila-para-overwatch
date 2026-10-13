@@ -29,17 +29,15 @@ BASE_DIR = Path(__file__).resolve().parent
 CONFIG_PATH = BASE_DIR / "config.json"
 
 DEFAULTS = {
-    "provider": "ntfy",              # "ntfy" ou "telegram"
+    "provider": "ntfy",              
     "ntfy_topic": "",
     "telegram_token": "",
     "telegram_chat_id": "",
     "reference_image": "reference/match_found.png",
-    "monitor": 1,                    # 1 = monitor principal
-    "check_interval": 1.0,           # segundos entre cada verificação
-    "threshold": 0.80,               # 0 a 1; quanto maior, mais rígido
+    "monitor": 1,                    
     "scales": [0.8, 0.9, 1.0, 1.1, 1.2],
-    "work_scale": 0.5,               # reduz a captura para ficar mais leve
-    "cooldown": 60,                  # segundos sem renotificar após um aviso
+    "work_scale": 0.5,               
+    "cooldown": 60,                 
     "message": "Partida encontrada! Volte para o Overwatch e aceite.",
 }
 
@@ -165,8 +163,7 @@ def main() -> None:
                 screen = grab_gray(sct, monitor, cfg["work_scale"])
                 failures = 0
             except mss.exception.ScreenShotError as e:
-                # O Windows às vezes recusa a captura (tela bloqueada, UAC,
-                # mudança de resolução...). Recria o capturador e tenta de novo.
+                
                 failures += 1
                 if failures == 1 or failures % 10 == 0:
                     print(f"\n[aviso] Falha ao capturar a tela ({failures}x): {e}")

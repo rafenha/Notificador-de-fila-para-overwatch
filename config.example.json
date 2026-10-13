@@ -1,6 +1,6 @@
 {
   "provider": "ntfy",
-  "ntfy_topic": "rafael-overwatch-8472",
+  "ntfy_topic": "seu server aqui",
   "telegram_token": "",
   "telegram_chat_id": "",
   "reference_image": "reference/match_found.png",
